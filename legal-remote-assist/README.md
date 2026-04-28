@@ -145,6 +145,40 @@ legal-remote-assist/dist/legal-remote-assist-local.zip
 
 ---
 
+## 7) 生成 EXE 文件（Windows）
+
+> 说明：当前仓库运行环境是 Linux，无法直接产出 Windows `.exe`。
+> 已提供 Windows 原生打包脚本，在 Windows 10/11 上可直接生成 EXE。
+
+### 7.1 准备
+
+确保 Windows 已安装 Node.js，并且项目目录在本地可访问。
+
+### 7.2 执行打包
+
+在 PowerShell 中运行：
+
+```powershell
+cd legal-remote-assist/windows
+powershell -ExecutionPolicy Bypass -File .\build-exe.ps1
+```
+
+成功后输出：
+
+```text
+legal-remote-assist/dist/windows/LegalRemoteAssist.exe
+```
+
+### 7.3 双击运行
+
+双击 `LegalRemoteAssist.exe`（内部启动 `LegalRemoteAssist.bat`），会：
+- 进入项目目录
+- 自动安装依赖（首次）
+- 打开浏览器 `https://127.0.0.1:8443`
+- 启动 Node 服务
+
+---
+
 ## 5) 合规扩展建议（如你确需“系统级输入控制”）
 
 若你在**自有设备**做受控测试，可在 Host 本机加“输入适配器插件”，并同时满足：

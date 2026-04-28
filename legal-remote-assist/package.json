@@ -6,7 +6,8 @@
   "scripts": {
     "start": "node server/index.js",
     "start:local": "bash ./start-local.sh",
-    "install:desktop": "bash ./install-desktop-entry.sh"
+    "install:desktop": "bash ./install-desktop-entry.sh",
+    "build:exe:win": "powershell -ExecutionPolicy Bypass -File .\\windows\\build-exe.ps1"
   },
   "dependencies": {
     "dotenv": "^16.4.5",
