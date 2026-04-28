@@ -93,6 +93,26 @@ npm start
 https://<你的局域网IP>:8443
 ```
 
+
+### 3.5 桌面双击启动（Linux）
+
+已提供桌面启动文件：
+- `desktop/LegalRemoteAssist.desktop`
+- `start-local.sh`
+
+使用方式：
+
+```bash
+cd legal-remote-assist
+chmod +x start-local.sh install-desktop-entry.sh
+./install-desktop-entry.sh
+```
+
+之后可从桌面双击 `LegalRemoteAssist.desktop` 启动：
+- 自动检查依赖（缺失时执行 `npm install`）
+- 自动生成本地开发证书（缺失时）
+- 自动打开浏览器到 `https://127.0.0.1:8443`
+
 ---
 
 ## 4) 安全说明

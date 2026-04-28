@@ -4,7 +4,9 @@
   "description": "Consent-first remote assistance demo over WSS/TLS",
   "main": "server/index.js",
   "scripts": {
-    "start": "node server/index.js"
+    "start": "node server/index.js",
+    "start:local": "bash ./start-local.sh",
+    "install:desktop": "bash ./install-desktop-entry.sh"
   },
   "dependencies": {
     "dotenv": "^16.4.5",
