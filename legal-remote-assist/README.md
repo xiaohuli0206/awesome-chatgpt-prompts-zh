@@ -125,6 +125,26 @@ chmod +x start-local.sh install-desktop-entry.sh
 
 ---
 
+
+## 6) 打包下载到本地
+
+项目内置打包脚本（会自动排除 `node_modules`、运行日志、证书私钥和 `.env`）：
+
+```bash
+cd legal-remote-assist
+bash ./release/package.sh
+```
+
+打包完成后文件在：
+
+```text
+legal-remote-assist/dist/legal-remote-assist-local.zip
+```
+
+把这个 zip 下载到本地后解压，按本文「3) 安装与运行」即可启动。
+
+---
+
 ## 5) 合规扩展建议（如你确需“系统级输入控制”）
 
 若你在**自有设备**做受控测试，可在 Host 本机加“输入适配器插件”，并同时满足：
