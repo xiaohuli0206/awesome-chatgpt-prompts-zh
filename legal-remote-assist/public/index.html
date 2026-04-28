@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>合法授权远程协助</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <main>
+      <h1>合法授权远程协助（演示版）</h1>
+      <p>仅用于你本人设备之间的明确授权协助。默认局域网，且每次会话都要被控端点击允许。</p>
+
+      <section class="card">
+        <h2>被控端（Host）</h2>
+        <input id="hostDevice" placeholder="设备名（例如：我的笔记本）" />
+        <button id="btnHostStart">启动被控端</button>
+        <p>配对码：<strong id="pairCode">-</strong></p>
+        <p id="approvalBanner"></p>
+        <button id="btnApprove" disabled>允许连接</button>
+        <button id="btnReject" disabled>拒绝连接</button>
+        <button id="btnHostShare" disabled>开始共享屏幕</button>
+        <button id="btnHostDisconnect" disabled>断开会话</button>
+        <video id="hostPreview" autoplay muted playsinline></video>
+        <div id="inputFeed" class="log"></div>
+      </section>
+
+      <section class="card">
+        <h2>控制端（Controller）</h2>
+        <input id="ctrlDevice" placeholder="设备名（例如：我的台式机）" />
+        <input id="pairInput" placeholder="输入 6 位配对码" />
+        <button id="btnJoin">申请连接</button>
+        <button id="btnCtrlDisconnect" disabled>断开会话</button>
+        <p id="ctrlStatus">状态：未连接</p>
+        <video id="remoteView" autoplay playsinline></video>
+      </section>
+
+      <section class="card">
+        <h2>连接日志（本地展示）</h2>
+        <pre id="localLog" class="log"></pre>
+      </section>
+    </main>
+    <script src="/main.js"></script>
+  </body>
+</html>
