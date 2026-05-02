@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Legal Remote Assist
+Comment=启动合法授权远程协助工具（前台可见、需手动授权）
+Exec=bash -lc 'cd __APP_DIR__ && ./start-local.sh'
+Icon=utilities-terminal
+Terminal=true
+Categories=Network;RemoteAccess;
